@@ -69,6 +69,10 @@ jobs:
           name: tarballs
           path: ${{ github.workspace }}/tarballs/
 
+      - run: |
+          pwd
+          ls -al
+
       - name: Perform semantic-release
         if: ${{ success() }}
         env:
