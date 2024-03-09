@@ -13,6 +13,8 @@
       auto-optimise-store = true;
     };
 
+  pkgs.config.allowUnfree = true;
+
   environment.systemPackages = [
     pkgs.atlantis
     pkgs.terraform

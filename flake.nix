@@ -5,12 +5,15 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
   };
 
-  outputs = { self, nixpkgs }:
+  outputs = { self, nixpkgs }@inputs:
 
-  {
+  let
+    system = "x86_64-linux";
+  in {
     nixosConfigurations = {
       atlantis = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        inherit system;
+        specialArgs = { inherit inputs; };
 
         modules = [
           "${nixpkgs}/nixos/modules/virtualisation/proxmox-lxc.nix"
