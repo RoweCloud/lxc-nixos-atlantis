@@ -1,3 +1,15 @@
+## [1.0.3](https://github.com/RoweCloud/lxc-nixos-atlantis/compare/1.0.2...1.0.3) (2024-03-09)
+
+
+### 🦊 CI/CD
+
+* Debugging commands to see why we are not having binaries uploaded to release ([84ab962](https://github.com/RoweCloud/lxc-nixos-atlantis/commit/84ab962e47f2b7b59b21a50d989fb614dc80d93a))
+
+
+### 🛠 Fixes
+
+* Specify name of directory fprartifacts to be uploaded from ([f441dc4](https://github.com/RoweCloud/lxc-nixos-atlantis/commit/f441dc458ea1c545c0442d90cc241846905377d3))
+
 ## [1.0.2](https://github.com/RoweCloud/lxc-nixos-atlantis/compare/1.0.1...1.0.2) (2024-03-09)
 
 
