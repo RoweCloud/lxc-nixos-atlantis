@@ -6,22 +6,14 @@
   };
 
   outputs = { self, nixpkgs }:
-  let system = "x86_64-linux";
 
-  pkgs = import nixpkgs {
-    inherit system;
-    config = {
-      allowUnfree = true;
-    };
-  };
-
-  in
   {
     nixosConfigurations = {
       atlantis = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit system; };
+        hostSystem = "x86_64-linux";
 
         modules = [
+          "${nixpkgs}/nixos/modules/virtualisation/proxmox-lxc.nix"
           ./nixos/configuration.nix
         ];
       };
