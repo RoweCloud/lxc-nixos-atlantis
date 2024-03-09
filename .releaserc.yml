@@ -75,5 +75,4 @@ writeChangelog:
 createGitHubRelease:
   - path: "@semantic-release/github"
     assets:
-      - path: "tarballs/*.tar.xz"
-      - path: "tarballs/*.tar.gz"
+      - path: "tarballs"
