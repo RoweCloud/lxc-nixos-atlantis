@@ -15,6 +15,7 @@
 
   environment.systemPackages = [
     pkgs.atlantis
+    pkgs.terraform
   ];
 
   system.stateVersion = "23.11";
