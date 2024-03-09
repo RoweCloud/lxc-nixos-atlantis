@@ -18,7 +18,7 @@
   in
   {
     nixosConfigurations = {
-      atlantisNixos = nixpkgs.lib.nixosSystem {
+      atlantis = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit system; };
 
         modules = [

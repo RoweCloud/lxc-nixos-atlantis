@@ -17,7 +17,7 @@ jobs:
 
       - name: Generate NixOS configuration
         run: |
-          nix run github:nix-community/nixos-generators -- -f proxmox-lxc --flake .#default | {
+          nix run github:nix-community/nixos-generators -- -f proxmox-lxc --flake .#atlantis | {
             read path
             echo "BUILD_PATH=$path" >> $GITHUB_ENV
           }
