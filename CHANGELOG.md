@@ -1,3 +1,15 @@
+## [1.0.2](https://github.com/RoweCloud/lxc-nixos-atlantis/compare/1.0.1...1.0.2) (2024-03-09)
+
+
+### 🦊 CI/CD
+
+* Run workflow autoatically on push to main or PR ([3a7e7fd](https://github.com/RoweCloud/lxc-nixos-atlantis/commit/3a7e7fd243f365eb0a68361cce45c25e7de98c10))
+
+
+### 🛠 Fixes
+
+* Correctly specify paths for artifacts to upload to GH Release ([2c08d31](https://github.com/RoweCloud/lxc-nixos-atlantis/commit/2c08d317374008d851d882993324e96507c9f248))
+
 ## [1.0.1](https://github.com/RoweCloud/lxc-nixos-atlantis/compare/1.0.0...1.0.1) (2024-03-09)
 
 
