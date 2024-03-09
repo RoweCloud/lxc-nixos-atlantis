@@ -13,5 +13,9 @@
       auto-optimise-store = true;
     };
 
+  environment.systemPackages = [
+    pkgs.atlantis
+  ];
+
   system.stateVersion = "23.11";
 }
