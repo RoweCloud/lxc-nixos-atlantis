@@ -1,3 +1,15 @@
+## [1.0.1](https://github.com/RoweCloud/lxc-nixos-atlantis/compare/1.0.0...1.0.1) (2024-03-09)
+
+
+### 🦊 CI/CD
+
+* Update semantic-release process to correctly upload tarball to GH Release ([6c19a8c](https://github.com/RoweCloud/lxc-nixos-atlantis/commit/6c19a8c0eab7d61e946e0b392e3f82cc78761a8c))
+
+
+### 🛠 Fixes
+
+* Added htop to template ([dd29527](https://github.com/RoweCloud/lxc-nixos-atlantis/commit/dd29527875b2c0d144ab33af44e3b028b3944b73))
+
 ## 1.0.0 (2024-03-09)
 
 
