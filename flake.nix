@@ -10,7 +10,7 @@
   {
     nixosConfigurations = {
       atlantis = nixpkgs.lib.nixosSystem {
-        hostSystem = "x86_64-linux";
+        system = "x86_64-linux";
 
         modules = [
           "${nixpkgs}/nixos/modules/virtualisation/proxmox-lxc.nix"
