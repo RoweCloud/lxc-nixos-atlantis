@@ -1,0 +1,78 @@
+branches:
+  - "main"
+  - name: "beta"
+    prerelease: true
+  - name: "alpha"
+    prerelease: true
+
+tagFormat: ${version}
+
+plugins: [
+  "@semantic-release/commit-analyzer",
+  "@semantic-release/release-notes-generator",
+  "@semantic-release/changelog",
+  "@semantic-release/git",
+  "@semantic-release/github"
+]
+
+verifyConditions:
+  - "@semantic-release/changelog"
+  - "@semantic-release/git"
+  - "@semantic-release/github"
+
+analyzeCommits:
+  - path: "@semantic-release/commit-analyzer"
+    preset: "conventionalcommits"
+
+generateNotes:
+  - path: "@semantic-release/release-notes-generator"
+    preset: "conventionalcommits"
+    presetConfig:
+      types:
+        - type: 'build'
+          section: '🦊 CI/CD'
+          hidden: false
+        - type: 'chore'
+          section: 'Other'
+          hidden: false
+        - type: 'ci'
+          section: '🦊 CI/CD'
+          hidden: false
+        - type: 'docs'
+          section: '📔 Docs'
+          hidden: false
+        - type: 'example'
+          section: '📝 Examples'
+          hidden: false
+        - type: 'feat'
+          section: '🚀 Features'
+          hidden: false
+        - type: 'fix'
+          section: '🛠 Fixes'
+          hidden: false
+        - type: 'perf'
+          section: '⏩ Performance'
+        - type: 'refactor'
+          section: '✂️ Refactor'
+          hidden: false
+        - type: 'revert'
+          section: '🙅‍♂️ Reverts'
+        - type: 'style'
+          section: '💈 Style'
+        - type: 'test'
+          section: '🧪 Tests'
+          hidden: false
+
+generateChangelog:
+  - path: "@semantic-release/changelog"
+    changelogFile: "CHANGELOG.md"
+
+writeChangelog:
+  - path: "@semantic-release/git"
+    assets: [ "CHANGELOG.md" ]
+    message: "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
+
+createGitHubRelease:
+  - path: "@semantic-release/github"
+    assets:
+      - "tarballs/*.tar.gz"

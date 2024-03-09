@@ -1,4 +1,11 @@
 name: Build Proxmox LXC Container Template
+
+permissions:
+  actions: read
+  contents: write
+  issues: write
+  pull-requests: write
+
 on:
   workflow_dispatch:
 
@@ -21,3 +28,45 @@ jobs:
             read path
             echo "BUILD_PATH=$path" >> $GITHUB_ENV
           }
+
+      - name: Copy tarball to separate directory
+        run: |
+          mkdir ${{ github.workspace }}/tarballs
+          cp "${{ env.BUILD_PATH }}" ${{ github.workspace }}/tarballs/
+
+      - name: Upload tarballs
+        uses: actions/upload-artifact@v4
+        with:
+          name: tarballs
+          path: ${{ github.workspace }}/tarballs/
+
+  semantic-release:
+    runs-on: ubuntu-22.04
+    needs:
+      - build-lxc-template
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup NodeJS
+        id: setup-node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "lts/*"
+          cache: 'npm'
+
+      - name: Install NodeJS dependencies
+        run: npm ci
+
+      - name: Download tarballs
+        uses: actions/download-artifact@v4
+        with:
+          name: tarballs
+          path: ${{ github.workspace }}/tarballs/
+
+      - name: Perform semantic-release
+        if: ${{ success() }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
