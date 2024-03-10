@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/RoweCloud/lxc-nixos-atlantis/compare/1.0.3...1.0.4) (2024-03-10)
+
+
+### 🛠 Fixes
+
+* Trigger new release with updated assets path ([c6b4258](https://github.com/RoweCloud/lxc-nixos-atlantis/commit/c6b42585d9aaff777b2c4dfa7ea2c3197ce85b4c))
+
 ## [1.0.3](https://github.com/RoweCloud/lxc-nixos-atlantis/compare/1.0.2...1.0.3) (2024-03-09)
 
 
