@@ -72,6 +72,7 @@ jobs:
       - run: |
           pwd
           ls -al
+          ls -al tarballs
 
       - name: Perform semantic-release
         if: ${{ success() }}
