@@ -1,3 +1,15 @@
+## [1.0.5](https://github.com/RoweCloud/lxc-nixos-atlantis/compare/1.0.4...1.0.5) (2024-03-10)
+
+
+### 🦊 CI/CD
+
+* List contents of tarballs directory for debug purposes ([d139e6c](https://github.com/RoweCloud/lxc-nixos-atlantis/commit/d139e6cdf54e69ea28533cafdabe9f464bc39c11))
+
+
+### 🛠 Fixes
+
+* Use correct step name for publishing artifacts to GitHub release ([5245606](https://github.com/RoweCloud/lxc-nixos-atlantis/commit/524560613e27424ed7d843c347fe7e703646db99))
+
 ## [1.0.4](https://github.com/RoweCloud/lxc-nixos-atlantis/compare/1.0.3...1.0.4) (2024-03-10)
 
 
