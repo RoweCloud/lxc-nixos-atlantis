@@ -72,7 +72,7 @@ writeChangelog:
     assets: [ "CHANGELOG.md" ]
     message: "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
 
-createGitHubRelease:
+publish:
   - path: "@semantic-release/github"
     assets:
-      - path: "**/tarballs/**"
+      - path: "tarballs"
