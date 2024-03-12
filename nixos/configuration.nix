@@ -21,5 +21,7 @@
     pkgs.htop
   ];
 
+  users.users.root.initialHashedPassword = "";
+
   system.stateVersion = "23.11";
 }
