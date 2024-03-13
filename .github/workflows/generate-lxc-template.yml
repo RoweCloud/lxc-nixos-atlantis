@@ -36,7 +36,7 @@ jobs:
       - name: Copy tarball to separate directory
         run: |
           mkdir ${{ github.workspace }}/tarballs
-          cp "${{ env.BUILD_PATH }}" ${{ github.workspace }}/tarballs/
+          cp "${{ env.BUILD_PATH }}" "${{ github.workspace }}/tarballs/atlantis-${{ env.BUILD_PATH }}"
 
       - name: Upload tarballs
         uses: actions/upload-artifact@v4
@@ -68,11 +68,6 @@ jobs:
         with:
           name: tarballs
           path: ${{ github.workspace }}/tarballs/
-
-      - run: |
-          pwd
-          ls -al
-          ls -al tarballs
 
       - name: Perform semantic-release
         if: ${{ success() }}
