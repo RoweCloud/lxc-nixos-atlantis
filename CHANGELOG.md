@@ -1,3 +1,16 @@
+## [1.1.0](https://github.com/RoweCloud/lxc-nixos-atlantis/compare/1.0.5...1.1.0) (2024-03-13)
+
+
+### 🦊 CI/CD
+
+* Prefix the filename of the template with 'atlantis-' ([7bc54ee](https://github.com/RoweCloud/lxc-nixos-atlantis/commit/7bc54eec670d2d2feb72bf095428f9c5e9b06b84))
+* Use basename of build path to correctly generate the new filename ([7d332cb](https://github.com/RoweCloud/lxc-nixos-atlantis/commit/7d332cb873ccf3c12c4c97409509f0664c7dfc59))
+
+
+### 🚀 Features
+
+* Set empty password for root user by default ([7e45f54](https://github.com/RoweCloud/lxc-nixos-atlantis/commit/7e45f543fc4ea2561e6f0bfb1c1e5272d8714c2f))
+
 ## [1.0.5](https://github.com/RoweCloud/lxc-nixos-atlantis/compare/1.0.4...1.0.5) (2024-03-10)
 
 
