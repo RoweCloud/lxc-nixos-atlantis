@@ -14,15 +14,7 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  environment.systemPackages = [
-    pkgs.atlantis
-    pkgs.terraform
-    pkgs.htop
-  ];
-
   users.users.root.initialHashedPassword = "";
-
-  services.cloudflared.enabled = true;
 
   system.stateVersion = "23.11";
 }
