@@ -1,17 +1,16 @@
-{
-  inputs,
-  lib,
-  config,
-  pkgs,
-  ...
+{ inputs
+, lib
+, config
+, pkgs
+, ...
 }: {
 
-  imports = [];
+  imports = [ ];
 
   nix.settings = {
-      experimental-features = "nix-command flakes";
-      auto-optimise-store = true;
-    };
+    experimental-features = "nix-command flakes";
+    auto-optimise-store = true;
+  };
 
   nixpkgs.config.allowUnfree = true;
 
@@ -22,6 +21,8 @@
   ];
 
   users.users.root.initialHashedPassword = "";
+
+  services.cloudflared.enabled = true;
 
   system.stateVersion = "23.11";
 }

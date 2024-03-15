@@ -7,19 +7,22 @@
 
   outputs = { self, nixpkgs }@inputs:
 
-  let
-    system = "x86_64-linux";
-  in {
-    nixosConfigurations = {
-      atlantis = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = { inherit inputs; };
+    let
+      system = "x86_64-linux";
+    in
+    {
+      nixosConfigurations = {
+        atlantis = nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = { inherit inputs; };
 
-        modules = [
-          "${nixpkgs}/nixos/modules/virtualisation/proxmox-lxc.nix"
-          ./nixos/configuration.nix
-        ];
+          modules = [
+            "${nixpkgs}/nixos/modules/virtualisation/proxmox-lxc.nix"
+            ./nixos/configuration.nix
+            ./nixos/cloudflare-tunnel.nix
+            ./nixos/atlantis.nix
+          ];
+        };
       };
     };
-  };
 }
