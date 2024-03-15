@@ -1,3 +1,20 @@
+## [1.2.0](https://github.com/RoweCloud/lxc-nixos-atlantis/compare/1.1.0...1.2.0) (2024-03-15)
+
+
+### 🦊 CI/CD
+
+* Include nixpkgs-fmt in pre-commit configuration ([173dccc](https://github.com/RoweCloud/lxc-nixos-atlantis/commit/173dccce809ae7cb356a42549b93e8290de8b5f4))
+
+
+### 🚀 Features
+
+* Created systemd services for Atlantis & cloudflared ([b33398e](https://github.com/RoweCloud/lxc-nixos-atlantis/commit/b33398e74cdcdc623df5d97e2b397b9b7527ffd6))
+
+
+### 🛠 Fixes
+
+* Removed packages from configuration.nix ([868934f](https://github.com/RoweCloud/lxc-nixos-atlantis/commit/868934f23c5600f1c09236b273b308da7cb8290c))
+
 ## [1.1.0](https://github.com/RoweCloud/lxc-nixos-atlantis/compare/1.0.5...1.1.0) (2024-03-13)
 
 
