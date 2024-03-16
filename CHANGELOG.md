@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/RoweCloud/lxc-nixos-atlantis/compare/1.2.0...1.2.1) (2024-03-16)
+
+
+### 🛠 Fixes
+
+* Corrected name of cloudflared binary in service ([fbba8a1](https://github.com/RoweCloud/lxc-nixos-atlantis/commit/fbba8a17297209bf84478dd13d5d583c30b7f666))
+
 ## [1.2.0](https://github.com/RoweCloud/lxc-nixos-atlantis/compare/1.1.0...1.2.0) (2024-03-15)
 
 
