@@ -19,7 +19,7 @@
     wantedBy = [ "multi-user.target" ];
     after = [ "network.target" "network-online.target" ];
     serviceConfig = {
-      ExecStart = "${pkgs.cloudflared}/bin/cloudlared tunnel --config=/etc/cloudflared/cloudflared.yaml --no-autoupdate run";
+      ExecStart = "${pkgs.cloudflared}/bin/cloudflared tunnel --config=/etc/cloudflared/cloudflared.yaml --no-autoupdate run";
       Restart = "always";
       User = "cloudflared";
       Group = "cloudflared";
